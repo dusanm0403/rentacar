@@ -1,0 +1,83 @@
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1440px;
+$breakpoint-xxxl: 1700px;
+
+@mixin landscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin sm-only() {
+  @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin md-and-lower() {
+  @media (max-width: $breakpoint-lg - 1) {
+    @content;
+  }
+}
+
+@mixin md-only() {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+    @content;
+  }
+}
+
+@mixin md-lower-end-only() {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-md + 200) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin lg-only() {
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1) {
+    @content;
+  }
+}
+
+@mixin lg-and-lower() {
+  @media (max-width: $breakpoint-xl - 1) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxl() {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin xxxl() {
+  @media (min-width: $breakpoint-xxxl) {
+    @content;
+  }
+}

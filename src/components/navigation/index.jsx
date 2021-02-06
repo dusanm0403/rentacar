@@ -3,7 +3,6 @@ import "./Navigation.scss";
 import classNames from "classnames";
 
 const Navigation = ({ isScrolled, isAnimated }) => {
-  console.log(isScrolled, isAnimated);
   const navClasses = classNames(
     "Navigation",
     isScrolled && "Navigation-animated",

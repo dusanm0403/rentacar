@@ -1,9 +1,17 @@
 import React from "react";
 import "./Navigation.scss";
+import classNames from "classnames";
 
-const Navigation = () => {
+const Navigation = ({ isScrolled, isAnimated }) => {
+  console.log(isScrolled, isAnimated);
+  const navClasses = classNames(
+    "Navigation",
+    isScrolled && "Navigation-animated",
+    isAnimated && "Navigation-hidden"
+  );
+
   return (
-    <div className="Navigation">
+    <div className={navClasses}>
       <div className="Navigation-left">
         <h2>vozni park</h2>
         <h2>o nama</h2>

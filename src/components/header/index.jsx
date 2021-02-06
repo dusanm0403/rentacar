@@ -4,7 +4,6 @@ import hero from "../../assets/images/hero.jpg";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState(0);
-  const [isScrollDetected, setIsScrollDetected] = useState(false);
   const [direction, setDirection] = useState("");
 
   const handleScroll = () => {
@@ -12,12 +11,6 @@ const Header = () => {
     const isScrollingDown = windowScroll > scrollPos;
     setDirection(isScrollingDown ? "bottom" : "top");
     setScrollPos(windowScroll);
-    if (scrollPos > 1) {
-      setIsScrollDetected(true);
-    } else {
-      console.log("vratio se na top");
-      setIsScrollDetected(false);
-    }
   };
 
   useEffect(() => {

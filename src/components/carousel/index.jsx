@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Carousel.scss";
 import Item from "./item";
 
-const Carousel = () => {
+const Carousel = (props) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   let x;
@@ -40,31 +40,29 @@ const Carousel = () => {
     // }
   };
 
-  // const initialMarginOffset = 15;
+  const initialMarginOffset = 15;
 
-  // const remIncrement =
-  //   activeSlideIndex === 1
-  //     ? initialMarginOffset
-  //     : initialMarginOffset + 10 * (activeSlideIndex - 1);
+  const remIncrement =
+    activeSlideIndex === 1
+      ? initialMarginOffset
+      : initialMarginOffset + 10 * (activeSlideIndex - 1);
 
-  // // const isSmall = breakpoint === "sm";
+  const isSmall = props.breakpoint === "sm";
 
-  // const transform = isSmall
-  //   ? activeSlideIndex === 0
-  //     ? "translateX(4rem)"
-  //     : `translateX(calc(${-100 * activeSlideIndex}% + ${remIncrement}rem))`
-  //   : "none";
+  const transform = isSmall
+    ? activeSlideIndex === 0
+      ? "translateX(4rem)"
+      : `translateX(calc(${-100 * activeSlideIndex}% + ${remIncrement}rem))`
+    : "none";
 
   return (
     <div
       className="Carousel"
       onTouchStart={(event) => handleTouchStart(event)}
       onTouchMove={(event) => handleTouchMove(event)}
-      style={
-        {
-          // transform,
-        }
-      }
+      style={{
+        transform,
+      }}
     >
       {
         //mapa

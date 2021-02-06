@@ -4,7 +4,38 @@ import Navigation from "./components/navigation";
 import RentalFleets from "./components/rentalFleets";
 import "./styles/base/app.scss";
 
-const App = () => {
+import { WindowManager } from "react-window-decorators";
+
+const BREAKPOINTS = [
+  {
+    name: "sm",
+    media: "(min-width: 0)",
+  },
+  {
+    name: "md",
+    media: "(min-width: 768px)",
+  },
+  {
+    name: "lg",
+    media: "(min-width: 1024px)",
+  },
+  {
+    name: "xl",
+    media: "(min-width: 1280px)",
+  },
+  {
+    name: "xxl",
+    media: "(min-width: 1440px)",
+  },
+  {
+    name: "xxxl",
+    media: "(min-width: 1800px)",
+  },
+];
+
+new WindowManager(BREAKPOINTS);
+
+function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
   const [direction, setDirection] = useState("");
@@ -38,6 +69,6 @@ const App = () => {
       <RentalFleets />
     </div>
   );
-};
+}
 
 export default App;

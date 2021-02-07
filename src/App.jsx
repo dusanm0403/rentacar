@@ -5,6 +5,7 @@ import RentalFleets from "./components/rentalFleets";
 import "./styles/base/app.scss";
 
 import { WindowManager } from "react-window-decorators";
+import Footer from "./components/footer";
 
 const BREAKPOINTS = [
   {
@@ -65,8 +66,11 @@ function App() {
   return (
     <div className="App">
       <Navigation isScrolled={isScrolled} isAnimated={animatedHeader} />
-      <Header />
-      <RentalFleets />
+      <div className="content">
+        <Header />
+        <RentalFleets />
+      </div>
+      <Footer />
     </div>
   );
 }

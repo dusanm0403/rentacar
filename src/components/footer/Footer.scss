@@ -1,0 +1,36 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 20rem;
+  background-color: #000;
+  padding: 2rem 4rem;
+  p,
+  h3 {
+    color: #fff;
+  }
+  .Footer-upper {
+    height: 90%;
+  }
+  .Footer-lower {
+    height: 10%;
+    .Social-media {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.Footer-upper,
+.Footer-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

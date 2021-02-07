@@ -1,3 +1,5 @@
+@import "../../styles/base/mixins.scss";
+
 @keyframes scroll {
   from {
     top: 20%;
@@ -33,20 +35,19 @@
 }
 
 .Header {
-  height: 100vh;
+  height: 120vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  position: relative;
+  @include angle(after);
 }
 
 .Header-content {
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -54,6 +55,7 @@
   padding: 0 28%;
   text-align: center;
   align-items: center;
+  bottom: 4rem;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -91,7 +93,7 @@
 .Scrolling-mouse {
   width: 24px;
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 50%;
   height: 45px;
   background-color: transparent;

@@ -1,12 +1,9 @@
 import React from "react";
 import "./MobileNav.scss";
-import { NavLink } from 'react-router-dom'
-// import logo from "../../../assets/images/logos/logo.png";
 
-import cx from "classnames"
+import cx from "classnames";
 
-const MobileNav = ({ burgerActive, setBurgerActive }) => {
-
+const MobileNav = ({ burgerActive }) => {
   const mobileNavClasses = cx(
     "mobile-nav",
     burgerActive && "mobile-nav__active"
@@ -23,7 +20,7 @@ const MobileNav = ({ burgerActive, setBurgerActive }) => {
         <NavLink className="link" activeClassName="link__active" onClick={() => setBurgerActive(!burgerActive)} exact to='/'>KONTAKT</NavLink> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

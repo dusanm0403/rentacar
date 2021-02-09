@@ -21,7 +21,7 @@ const data = {
       brand: "Audi",
       model: "A4",
       imgs: [],
-      coverImg: audiCover,
+      coverImg: vwCover,
       specifications: {
         fuel: "dizel",
         transmission: "manualni",
@@ -34,7 +34,7 @@ const data = {
       brand: "VW",
       model: "Golf 6",
       imgs: [],
-      coverImg: vwCover,
+      coverImg: mercedesCover,
       specifications: {
         fuel: "dizel",
         transmission: "manualni",
@@ -47,13 +47,26 @@ const data = {
       brand: "Audi",
       model: "A4",
       imgs: [],
-      coverImg: audiCover,
+      coverImg: mercedesCover,
       specifications: {
         fuel: "dizel",
         transmission: "manualni",
         powerHP: "170ks",
         engineVolume: "1996cc",
         yearOfMaking: "2016"
+      }
+    },
+    {
+      brand: "Mercedes",
+      model: "CLS 500",
+      imgs: [],
+      coverImg: mercedesCover,
+      specifications: {
+        fuel: "benzin",
+        transmission: "automatski",
+        powerHP: "306ks",
+        engineVolume: "4966cc",
+        yearOfMaking: "2019"
       }
     },
     {

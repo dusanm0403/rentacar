@@ -1,0 +1,48 @@
+.mobile-nav {
+  height: calc(100vh - 8rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 8rem;
+  padding-top: 5vmin;
+  left: 0;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  z-index: 4;
+  background-color: #d4d4d4;
+  transform: translateX(100%);
+  transition: 0.3s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.mobile-nav__active {
+  transform: translateX(0);
+  transition: 0.3s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.mobile-nav a {
+  margin: 2rem 0;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.logo {
+  width: 15rem;
+}
+
+.links {
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+
+.link {
+  color: darken(white, 5%);
+  font-weight: 500;
+}
+
+.link__active {
+  color: white;
+  font-weight: 700;
+  transition: 0.3s transform cubic-bezier(0.19, 1, 0.22, 1);
+}

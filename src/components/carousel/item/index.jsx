@@ -1,36 +1,43 @@
 import React from "react";
 import "./Item.scss";
+import cx from 'classnames'
 
-const Item = (item) => {
+const Item = ({ isActive, data }) => {
+  
+  const itemClasses = cx({
+    "Item": true,
+    "Item-active": isActive
+  });
+
   return (
-    <div className="Item">
+    <div className={itemClasses}>
       <div className="ItemImg">
-        <img src={item.car.coverImg} alt="cover" />
+        <img src={data.coverImg} alt="cover" />
       </div>
-      <div className="ItemDescription">
+      <div className="slideDescription">
         <div className="CarBrand">
-          <h3>{item.car.brand}</h3>
-          <h5>{item.car.model}</h5>
+          <h3>{data.brand}</h3>
+          <h5>{data.model}</h5>
         </div>
         <div className="DescriptionLine">
           <p>Kubikaža:</p>
-          <p>{item.car.specifications.engineVolume}</p>
+          <p>{data.specifications.engineVolume}</p>
         </div>
         <div className="DescriptionLine">
           <p>Menjač:</p>
-          <p>{item.car.specifications.transmission}</p>
+          <p>{data.specifications.transmission}</p>
         </div>
         <div className="DescriptionLine">
           <p>Gorivo:</p>
-          <p>{item.car.specifications.fuel}</p>
+          <p>{data.specifications.fuel}</p>
         </div>
         <div className="DescriptionLine">
           <p>Snaga:</p>
-          <p>{item.car.specifications.powerHP}</p>
+          <p>{data.specifications.powerHP}</p>
         </div>
         <div className="DescriptionLine">
           <p>Godište:</p>
-          <p>{item.car.specifications.yearOfMaking}</p>
+          <p>{data.specifications.yearOfMaking}</p>
         </div>
       </div>
     </div>

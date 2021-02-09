@@ -1,3 +1,10 @@
+@import "../../styles/base/breakpoints.scss";
+
 .Info {
   width: 100%;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  @include md {
+    padding: 3rem 5rem;
+  }
 }

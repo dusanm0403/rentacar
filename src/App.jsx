@@ -8,6 +8,7 @@ import { WindowManager } from "react-window-decorators";
 import Footer from "./components/footer";
 import Info from './components/info'
 import PhoneBanner from './components/phoneBanner'
+import MobileNav from './components/mobileNav'
 
 const BREAKPOINTS = [
   {
@@ -55,6 +56,8 @@ function App() {
     }
   };
 
+  const [burgerActive, setBurgerActive] = useState(false)
+
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
     return () => {
@@ -67,7 +70,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation isScrolled={isScrolled} isAnimated={animatedHeader} />
+      <Navigation isScrolled={isScrolled} isAnimated={animatedHeader} burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
+      <MobileNav
+          setBurgerActive={setBurgerActive}
+          burgerActive={burgerActive}
+        />
       <div className="content">
         <Header />
         <PhoneBanner />

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Carousel.scss";
 import Item from "./item";
+import data from "../../data/data"
 
 const Carousel = (props) => {
+  const { cars } = data
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   let x;
@@ -32,12 +34,12 @@ const Carousel = (props) => {
   };
 
   const swipe = (direction) => {
-    // const MAX_SWIPE = data.boxes.length - 1;
-    // if (direction === "next" && activeSlideIndex < MAX_SWIPE) {
-    //   setActiveSlideIndex(activeSlideIndex + 1);
-    // } else if (direction === "prev" && activeSlideIndex !== 0) {
-    //   setActiveSlideIndex(activeSlideIndex - 1);
-    // }
+    const MAX_SWIPE = cars.length - 1;
+    if (direction === "next" && activeSlideIndex < MAX_SWIPE) {
+      setActiveSlideIndex(activeSlideIndex + 1);
+    } else if (direction === "prev" && activeSlideIndex !== 0) {
+      setActiveSlideIndex(activeSlideIndex - 1);
+    }
   };
 
   const initialMarginOffset = 15;
@@ -65,9 +67,10 @@ const Carousel = (props) => {
       }}
     >
       {
-        //mapa
+        cars.map((car, index) =>
+          <Item key={index} car={car} />
+        )
       }
-      <Item isActive={activeSlideIndex === "index"} />
     </div>
   );
 };

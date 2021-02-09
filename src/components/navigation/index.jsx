@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navigation.scss";
 import classNames from "classnames";
+import logo from "../../assets/images/logo.png"
 
 const Navigation = ({ isScrolled, isAnimated }) => {
   const navClasses = classNames(
@@ -16,7 +17,7 @@ const Navigation = ({ isScrolled, isAnimated }) => {
         <h2>o nama</h2>
       </div>
       <div className="Navigation-center">
-        <h3>Logo</h3>
+        <img src={logo} alt="logo"/>
       </div>
       <div className="Navigation-right">
         <h2>cenovnik</h2>

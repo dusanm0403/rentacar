@@ -1,0 +1,17 @@
+@import "../../styles/base/breakpoints.scss";
+
+.PhoneBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include md {
+    margin-top: 2.5rem;
+  }
+  a {
+    font-size: 3rem;
+    margin: 2rem;
+    color: #0768a2;
+  }
+}

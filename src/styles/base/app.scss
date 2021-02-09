@@ -1,5 +1,31 @@
+@import "./breakpoints.scss";
+
+.App {
+  font-size: 10px;
+}
+
 .content {
   position: relative;
-  margin-bottom: 20rem;
+  margin-bottom: 30rem;
   background-color: #fff;
+}
+
+h2 {
+  font-size: 1.5rem;
+  @include sd {
+    font-size: 2rem;
+  }
+  @include md {
+    font-size: 2rem;
+  }
+}
+h3 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1.8rem;
+  line-height: 2rem;
 }

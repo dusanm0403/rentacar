@@ -1,0 +1,29 @@
+.Item {
+  width: 28rem;
+  padding: 5%;
+  margin-bottom: 2rem;
+}
+
+.ItemImg {
+  width: 100%;
+}
+
+.ItemDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.CarBrand {
+  text-align: center;
+  margin: 0.7rem;
+}
+
+.DescriptionLine {
+  color: black;
+  margin: 0.7rem 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d4d4d4;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.scss";
-import hero from "../../assets/images/hero.jpg";
+import hero from "../../assets/images/main.jpg";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState(0);
@@ -25,9 +25,9 @@ const Header = () => {
   return (
     <div className="Header" style={{ backgroundImage: `url(${hero})` }}>
       <div className="Header-content">
-        <h3 className="Header-title">Title</h3>
-        <h5 className="Header-subTitle">Subtitle</h5>
-        <p className="Header-desc">Description</p>
+        <h3 className="Header-title">Rentacar</h3>
+        <h3 className="Header-subTitle">Fića</h3>
+        <p className="Header-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <div
           className="Scrolling-mouse"
           style={{ opacity: hideMouse ? 0 : 1 }}

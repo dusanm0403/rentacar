@@ -6,6 +6,8 @@ import "./styles/base/app.scss";
 
 import { WindowManager } from "react-window-decorators";
 import Footer from "./components/footer";
+import Info from './components/info'
+import PhoneBanner from './components/phoneBanner'
 
 const BREAKPOINTS = [
   {
@@ -68,7 +70,9 @@ function App() {
       <Navigation isScrolled={isScrolled} isAnimated={animatedHeader} />
       <div className="content">
         <Header />
+        <PhoneBanner />
         <RentalFleets />
+        <Info />
       </div>
       <Footer />
     </div>

@@ -1,3 +1,4 @@
+$breakpoint-sd: 440px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
@@ -16,11 +17,17 @@ $breakpoint-xxxl: 1700px;
   }
 }
 
-@mixin sm-only() {
-  @media (max-width: $breakpoint-md - 1) {
+@mixin sd() {
+  @media screen and (min-width: $breakpoint-sd) {
     @content;
   }
 }
+
+// @mixin sm-only() {
+//   @media (max-width: $breakpoint-md - 1) {
+//     @content;
+//   }
+// }
 
 @mixin md() {
   @media (min-width: $breakpoint-md) {

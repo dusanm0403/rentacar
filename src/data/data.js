@@ -1,5 +1,4 @@
 import mercedesCover from "../assets/images/mercedes.jpg";
-import vwCover from "../assets/images/vw6.jpg";
 
 const data = {
   cars: [

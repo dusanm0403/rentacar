@@ -21,7 +21,7 @@ const data = {
       brand: "Audi",
       model: "A4",
       imgs: [],
-      coverImg: vwCover,
+      coverImg: mercedesCover,
       specifications: {
         fuel: "dizel",
         transmission: "manualni",

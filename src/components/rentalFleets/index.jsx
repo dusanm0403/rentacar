@@ -6,7 +6,7 @@ const RentalFleets = () => {
   return (
     <div className="RentalFleets-wrapper">
       <h2>Vozila u ponudi</h2>
-      <div class="divider div-transparent" />
+      <div className="divider div-transparent" />
       <Carousel />
     </div>
   );

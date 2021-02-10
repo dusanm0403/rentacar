@@ -5,7 +5,8 @@ import "./RentalFleets.scss";
 const RentalFleets = () => {
   return (
     <div className="RentalFleets-wrapper">
-      <h2>Vozni park</h2>
+      <h2>Vozila u ponudi</h2>
+      <div class="divider div-transparent" />
       <Carousel />
     </div>
   );

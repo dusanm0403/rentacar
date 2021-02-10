@@ -7,13 +7,27 @@
   align-items: center;
   text-align: center;
   padding: 2rem;
+  @include sd {
+    padding: 2rem 4rem;
+  }
   @include md {
     margin-top: 2.5rem;
-    padding: 1rem 5rem;
+    padding: 2rem 15rem;
+  }
+  @include lg {
+    padding: 3rem 20rem;
   }
   a {
-    font-size: 3rem;
-    margin: 2rem;
-    color: #0768a2;
+    margin-left: 1rem;
+    font-size: 4rem;
+    color: #110e0e;
   }
+}
+
+.PhoneNumber {
+  padding: 0.5rem;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

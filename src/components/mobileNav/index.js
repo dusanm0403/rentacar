@@ -3,9 +3,10 @@ import "./MobileNav.scss";
 
 import cx from "classnames";
 
-const MobileNav = ({ burgerActive }) => {
+const MobileNav = ({ burgerActive, isScrolled }) => {
   const mobileNavClasses = cx(
     "mobile-nav",
+    burgerActive && isScrolled && "mobile-nav-animated",
     burgerActive && "mobile-nav__active"
   );
   return (

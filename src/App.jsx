@@ -6,9 +6,9 @@ import "./styles/base/app.scss";
 
 import { WindowManager } from "react-window-decorators";
 import Footer from "./components/footer";
-import Info from './components/info'
-import PhoneBanner from './components/phoneBanner'
-import MobileNav from './components/mobileNav'
+import Info from "./components/info";
+import PhoneBanner from "./components/phoneBanner";
+import MobileNav from "./components/mobileNav";
 
 const BREAKPOINTS = [
   {
@@ -56,7 +56,7 @@ function App() {
     }
   };
 
-  const [burgerActive, setBurgerActive] = useState(false)
+  const [burgerActive, setBurgerActive] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
@@ -68,13 +68,22 @@ function App() {
   const height = window.innerHeight;
   const animatedHeader = direction === "bottom" && scrollPos > height * 0.8;
 
+  // document.body.style.overflowX = "hidden";
+  // document.body.style.overflow = burgerActive ? "hidden" : "scroll";
+
   return (
     <div className="App">
-      <Navigation isScrolled={isScrolled} isAnimated={animatedHeader} burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
+      <Navigation
+        isScrolled={isScrolled}
+        isAnimated={animatedHeader}
+        burgerActive={burgerActive}
+        setBurgerActive={setBurgerActive}
+      />
       <MobileNav
-          setBurgerActive={setBurgerActive}
-          burgerActive={burgerActive}
-        />
+        setBurgerActive={setBurgerActive}
+        burgerActive={burgerActive}
+        isScrolled={isScrolled}
+      />
       <div className="content">
         <Header />
         <PhoneBanner />

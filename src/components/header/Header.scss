@@ -40,7 +40,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   @include angle(after);
 }
@@ -67,27 +66,33 @@
 }
 
 .Header-title {
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 6rem;
   opacity: 0;
   color: #d9d9d9;
   font-weight: 400;
   animation: fadeIn 2s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s 1 normal
     forwards;
+  @include md {
+    font-size: 6rem;
+  }
 }
 
 .Header-subTitle {
-  font-size: 6rem;
+  font-size: 5rem;
   font-style: bolder;
   font-weight: 400;
   color: #d9d9d9;
   opacity: 0;
   animation: fadeIn 2s cubic-bezier(0.215, 0.61, 0.355, 1) 2s 1 normal forwards;
+  @include md {
+    font-size: 6rem;
+  }
 }
 
 .Header-desc {
   margin-top: 3.5rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 3rem;
   font-weight: 400;
   color: #eee;
@@ -95,6 +100,9 @@
     forwards;
   transform: translateY(600%);
   opacity: 0;
+  @include md {
+    font-size: 2.5rem;
+  }
 }
 
 .Scrolling-mouse {

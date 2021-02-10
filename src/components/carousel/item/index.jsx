@@ -1,12 +1,11 @@
 import React from "react";
 import "./Item.scss";
-import cx from 'classnames'
+import cx from "classnames";
 
 const Item = ({ isActive, data }) => {
-  
   const itemClasses = cx({
-    "Item": true,
-    "Item-active": isActive
+    Item: true,
+    "Item-active": isActive,
   });
 
   return (
@@ -17,7 +16,7 @@ const Item = ({ isActive, data }) => {
       <div className="slideDescription">
         <div className="CarBrand">
           <h3>{data.brand}</h3>
-          <h5>{data.model}</h5>
+          <h3>{data.model}</h3>
         </div>
         <div className="DescriptionLine">
           <p>Kubikaža:</p>
@@ -41,7 +40,7 @@ const Item = ({ isActive, data }) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Item;

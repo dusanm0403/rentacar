@@ -14,10 +14,9 @@ const Footer = () => {
           <p>Rentacar Fića</p>
         </div>
         <div className="Footer-upper_right">
-          <h3>Kontakt</h3>
-          <p>Adresa</p>
-          <p>mail</p>
-          <p>telefon</p>
+          <p>Braće Jerković 112n</p>
+          <a href="mailto: dejancika90@gmail.com">dejancika90@gmail.com</a>
+          <a href="tel:+381698291133" >069/8291133</a>
         </div>
       </div>
       <div className="Footer-lower">

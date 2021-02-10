@@ -1,9 +1,11 @@
 @import "../../styles/base/breakpoints.scss";
+@import "../../styles/base/mixins.scss";
 
 .Info {
   width: 100%;
   margin: 2rem 0rem;
   padding: 2rem;
+  padding-bottom: 5rem;
   @include md {
     padding: 3rem 5rem;
   }

@@ -2,13 +2,13 @@
 
 .Navigation {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 7rem;
+  height: 8rem;
   background-color: rgba(77, 166, 255, 0);
   transition: all 0.2s ease-out;
-  padding: 0 2rem;
+  padding: 0 4rem;
   position: fixed;
   z-index: 3;
   @include md {
@@ -23,9 +23,13 @@
   transition: all 0.2s ease-out;
   height: 7rem;
 }
+.Navigation-burger-opened {
+  background-color: #110e0e;
+  transition: all 0.5s ease-out;
+}
 
 .Navigation-hidden {
-  transform: translateY(-100%);
+  transform: translateY(-105%);
   transition: all 0.2s ease-out;
 }
 
@@ -42,8 +46,9 @@
   display: none;
   @include md {
     display: flex;
+    justify-content: space-evenly;
     width: 40%;
-    h2 {
+    h5 {
       margin: 0 1.5rem;
       text-transform: uppercase;
       color: #fff;
@@ -54,14 +59,18 @@
 
 .Navigation-center {
   width: 30%;
-  @include sd {
+  img {
+    width: 100%;
+    @include sd {
+      width: 75%;
+    }
+    @include md {
+      width: 60%;
+    }
   }
   @include md {
     width: 20%;
     padding: 2vmax;
-    img {
-      width: 60%;
-    }
   }
 }
 
